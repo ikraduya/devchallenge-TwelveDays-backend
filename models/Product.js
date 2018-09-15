@@ -5,6 +5,6 @@ const productSchema = new mongoose.Schema({
   diff: Number
 }, { timestamps: true });
 
-const Event = mongoose.model('Event', productSchema);
+const Product = mongoose.model('Product', productSchema);
 
-module.exports = Event;
+module.exports = Product;
