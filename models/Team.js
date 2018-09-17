@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+
+const { Schema } = mongoose;
 
 const eventSchema = new mongoose.Schema({
   members: [{ type: Schema.Types.ObjectId, ref: 'Talent' }],
