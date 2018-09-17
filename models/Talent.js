@@ -1,13 +1,12 @@
 const mongoose = require('mongoose');
 
 const eventSchema = new mongoose.Schema({
-  id: Number,
   name: String,
   stream: String,
   star: Number,
   pointBurnHist: [Number],
-  PointRemainingHist: [Number],
-  PointQueueHist: [Number],
+  pointRemainingHist: [Number],
+  pointQueueHist: [Number],
   role: String,
 }, { timestamps: true });
 

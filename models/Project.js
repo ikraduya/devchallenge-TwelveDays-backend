@@ -8,7 +8,7 @@ const projectSchema = new mongoose.Schema({
   unit: String,
   stakeholder: String,
   sprint: Number,
-  status: ['Completed','Ongoing','Rejected','In Queue'],
+  status: ['Completed', 'Ongoing', 'Rejected', 'In Queue'],
   comment: String,
   performance: Number,
   memberList: [{ type: Schema.Types.ObjectId, ref: 'Talent' }],

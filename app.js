@@ -14,6 +14,8 @@ const path = require('path');
 const mongoose = require('mongoose');
 const expressValidator = require('express-validator');
 
+const config = require('./config');
+
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
  */
@@ -27,7 +29,7 @@ const app = express();
 /**
  * Connect to MongoDB.
  */
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(config.mongodb, { useNewUrlParser: true });
 mongoose.connection.on('error', (err) => {
   console.error(err);
   console.log('%s MongoDB connection error. Please make sure MongoDB is running.', chalk.red('✗'));
@@ -37,7 +39,7 @@ mongoose.connection.on('error', (err) => {
 /**
  * Express configuration.
  */
-app.set('port', process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080);
+app.set('port', 8080);
 app.use(compression());
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -46,10 +48,10 @@ app.use(expressValidator());
 app.use(session({
   resave: true,
   saveUninitialized: true,
-  secret: process.env.SESSION_SECRET,
+  secret: config.sessionSecret,
   cookie: { maxAge: 1209600000 }, // two weeks in milliseconds
   store: new MongoStore({
-    url: process.env.MONGODB_URI,
+    url: config.mongodb,
     autoReconnect: true,
   })
 }));
@@ -64,15 +66,7 @@ app.use('/api', require('./routes/api'));
 /**
  * Error Handler.
  */
-if (process.env.NODE_ENV === 'development') {
-  // only use in development
-  app.use(errorHandler());
-} else {
-  app.use(function(err, req, res, next) {
-    console.error(err);
-    res.status(500).send('Server Error');
-  });
-}
+app.use(errorHandler());
 
 /**
  * Start Express server.
