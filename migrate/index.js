@@ -8,7 +8,7 @@ const Team = require('../models/Team');
 
 const config = require('../config');
 
-mongoose.connect(config.mongodb);
+mongoose.connect(config.mongodb, { useNewUrlParser: true });
 mongoose.set('debug', true);
 mongoose.connection.on('error', (err) => {
   console.error(err);

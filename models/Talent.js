@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const eventSchema = new mongoose.Schema({
+const talentSchema = new mongoose.Schema({
   name: String,
   stream: String,
   star: Number,
@@ -10,6 +10,6 @@ const eventSchema = new mongoose.Schema({
   role: String,
 }, { timestamps: true });
 
-const Event = mongoose.model('Event', eventSchema);
+const Talent = mongoose.model('Talent', talentSchema);
 
-module.exports = Event;
+module.exports = Talent;
