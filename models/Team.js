@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const teamSchema = new mongoose.Schema({
+  name: String,
   members: [{ type: Schema.Types.ObjectId, ref: 'Talent' }],
   projects: [{ type: Schema.Types.ObjectId, ref: 'Project' }],
   events: [{ type: Schema.Types.ObjectId, ref: 'Event' }],

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Event = require('../models/Event');
+const Events = require('../models/Events');
 const Product = require('../models/Product');
 const Project = require('../models/Project');
 const Talent = require('../models/Talent');
@@ -111,11 +111,91 @@ const projectList = [
   },
 ];
 
+const teamList = [
+  {
+    name: "Teman Berbagi",
+    members: memberListTemanBerbagi.map(member => (member._id)),
+    events: eventList.map(event => event._id)
+  }
+];
+
+const productList = [
+  {
+    name: "MyNation",
+    rank: 1,
+    diff: 0
+  },
+  {
+    name: "YourLyfe",
+    rank: 2,
+    diff: 0
+  },
+  {
+    name: "BUMN",
+    rank: 3,
+    diff: 2
+  },
+  {
+    name: "MyIndihome",
+    rank: 4,
+    diff: 3
+  },
+  {
+    name: "Sobat BUMN",
+    rank: 5,
+    diff: -1
+  },
+  {
+    name: "Open Trip",
+    rank: 6,
+    diff: -2
+  },
+  {
+    name: "ODP Hunter",
+    rank: 7,
+    diff: 5
+  },
+  {
+    name: "SIIS",
+    rank: 8,
+    diff: 6
+  }
+];
+
+const eventList = [
+  { 
+    _id: mongoose.Types.ObjectId(),
+    time:'15/09/2018 17:00:00',
+    notes: 'Bertemu dengan Pak Rudi di Bandara Halim membawa dokumen terkait projek.',
+    location: 'Bandara Halim Kusuma',
+    eventCount: 1,
+  },
+  { 
+    _id: mongoose.Types.ObjectId(),
+    time:'17/09/2018 11:00:00',
+    notes: 'Bertemu dengan Pak Rudi di Bandara Halim membawa dokumen terkait projek.',
+    location: 'Bandara Halim Kusuma',
+    eventCount: 4,
+  }
+];
+
 Talent.remove()
   .then(() => Talent.insertMany(memberListIndihome))
   .then(() => Talent.insertMany(memberListTemanBerbagi))
-  .then(() => console.log('Talents reset Done'));
+  .then(() => console.log('Talents reset done'));
 
 Project.remove()
   .then(() => Project.insertMany(projectList))
-  .then(() => console.log('Projects reset Done'));
+  .then(() => console.log('Projects reset done'));
+
+Events.remove()
+  .then(() => Events.insertMany(eventList))
+  .then(() => console.log('Events reset done'));
+
+Product.remove()
+  .then(() => Product.insertMany(productList))
+  .then(() => console.log('Products reset done'));
+
+Team.remove()
+  .then(() => Team.insertMany(teamList))
+  .then(() => console.log('Team reset done'));
