@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const eventSchema = new mongoose.Schema({
   notes: String,
-  time: Date,
+  time: String,
   location: String,
   eventCount: Number
 }, { timestamps: true });

@@ -82,6 +82,23 @@ const memberListTemanBerbagi = [
   },
 ];
 
+const eventList = [
+  { 
+    _id: mongoose.Types.ObjectId(),
+    time:'15/09/2018 17:00:00',
+    notes: 'Bertemu dengan Pak Rudi di Bandara Halim membawa dokumen terkait projek.',
+    location: 'Bandara Halim Kusuma',
+    eventCount: 1,
+  },
+  { 
+    _id: mongoose.Types.ObjectId(),
+    time:'17/09/2018 11:00:00',
+    notes: 'Bertemu dengan Pak Rudi di Bandara Halim membawa dokumen terkait projek.',
+    location: 'Bandara Halim Kusuma',
+    eventCount: 4,
+  }
+];
+
 const projectList = [
   {
     title: 'My Indihome Consumen',
@@ -162,23 +179,6 @@ const productList = [
   }
 ];
 
-const eventList = [
-  { 
-    _id: mongoose.Types.ObjectId(),
-    time:'15/09/2018 17:00:00',
-    notes: 'Bertemu dengan Pak Rudi di Bandara Halim membawa dokumen terkait projek.',
-    location: 'Bandara Halim Kusuma',
-    eventCount: 1,
-  },
-  { 
-    _id: mongoose.Types.ObjectId(),
-    time:'17/09/2018 11:00:00',
-    notes: 'Bertemu dengan Pak Rudi di Bandara Halim membawa dokumen terkait projek.',
-    location: 'Bandara Halim Kusuma',
-    eventCount: 4,
-  }
-];
-
 Talent.remove()
   .then(() => Talent.insertMany(memberListIndihome))
   .then(() => Talent.insertMany(memberListTemanBerbagi))
@@ -198,4 +198,4 @@ Product.remove()
 
 Team.remove()
   .then(() => Team.insertMany(teamList))
-  .then(() => console.log('Team reset done'));
+  .then(() => console.log('Teams reset done'));
