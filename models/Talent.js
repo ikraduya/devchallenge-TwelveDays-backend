@@ -8,6 +8,7 @@ const talentSchema = new mongoose.Schema({
   pointRemainingHist: [Number],
   pointQueueHist: [Number],
   role: String,
+  status: String,
 }, { timestamps: true });
 
 const Talent = mongoose.model('Talent', talentSchema);
