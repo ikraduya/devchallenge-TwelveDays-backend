@@ -6,7 +6,7 @@ const {
   getAllTeam,
 } = require('../controllers/team');
 const {
-  getAllEvent,
+  getAllEvent, updateEvent, createEvent,
 } = require('../controllers/calendar');
 
 const router = express.Router();
@@ -38,6 +38,8 @@ router.get('/team/teams', getAllTeam);
  * Calendar API
  */
 router.get('/calendar/events', getAllEvent);
+router.post('/calendar/events/update', updateEvent);
+router.post('/calendar/events/create', createEvent);
 
 /**
  * 404

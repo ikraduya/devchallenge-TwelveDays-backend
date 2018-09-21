@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
 
 const eventSchema = new mongoose.Schema({
+  time: Date,
   notes: String,
-  time: String,
   location: String,
-  eventCount: Number
 }, { timestamps: true });
 
 const Events = mongoose.model('Events', eventSchema);

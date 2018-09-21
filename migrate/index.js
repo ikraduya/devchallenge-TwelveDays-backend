@@ -83,16 +83,16 @@ const memberListTemanBerbagi = [
 ];
 
 const eventList = [
-  { 
+  {
     _id: mongoose.Types.ObjectId(),
-    time:'15/09/2018 17:00:00',
+    time: new Date('2018-09-15T17:00:00'),
     notes: 'Bertemu dengan Pak Rudi di Bandara Halim membawa dokumen terkait projek.',
     location: 'Bandara Halim Kusuma',
     eventCount: 1,
   },
-  { 
+  {
     _id: mongoose.Types.ObjectId(),
-    time:'17/09/2018 11:00:00',
+    time: new Date('2018-09-17T11:00:00'),
     notes: 'Bertemu dengan Pak Rudi di Bandara Halim membawa dokumen terkait projek.',
     location: 'Bandara Halim Kusuma',
     eventCount: 4,
@@ -130,7 +130,7 @@ const projectList = [
 
 const teamList = [
   {
-    name: "Teman Berbagi",
+    name: 'Teman Berbagi',
     members: memberListTemanBerbagi.map(member => (member._id)),
     events: eventList.map(event => event._id)
   }
@@ -138,42 +138,42 @@ const teamList = [
 
 const productList = [
   {
-    name: "MyNation",
+    name: 'MyNation',
     rank: 1,
     diff: 0
   },
   {
-    name: "YourLyfe",
+    name: 'YourLyfe',
     rank: 2,
     diff: 0
   },
   {
-    name: "BUMN",
+    name: 'BUMN',
     rank: 3,
     diff: 2
   },
   {
-    name: "MyIndihome",
+    name: 'MyIndihome',
     rank: 4,
     diff: 3
   },
   {
-    name: "Sobat BUMN",
+    name: 'Sobat BUMN',
     rank: 5,
     diff: -1
   },
   {
-    name: "Open Trip",
+    name: 'Open Trip',
     rank: 6,
     diff: -2
   },
   {
-    name: "ODP Hunter",
+    name: 'ODP Hunter',
     rank: 7,
     diff: 5
   },
   {
-    name: "SIIS",
+    name: 'SIIS',
     rank: 8,
     diff: 6
   }
