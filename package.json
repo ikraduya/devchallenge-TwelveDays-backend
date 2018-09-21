@@ -1,10 +1,10 @@
 {
-  "name": "telkom-codex-back",
+  "name": "devchallenge-TwelveDays",
   "version": "0.1.0",
   "description": "Telkom Codex Backend",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ikraduya/telkom-codex-back.git"
+    "url": "https://github.com/ikraduya/devchallenge-TwelveDays-backend.git"
   },
   "private": true,
   "author": "Ikraduya Edian, Rifo A. Genadi",

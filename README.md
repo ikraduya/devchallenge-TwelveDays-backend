@@ -1,4 +1,4 @@
-# devchallenge-TwelveDays
+# devchallenge-TwelveDays-backend
 
 ## Nama Tim : TwelveDays
 ## Anggota Tim :
@@ -6,26 +6,17 @@
 - Rifo Ahmad Genadi | rifoagenadi@gmail.com
 
 # Cara Instalasi Program
-
-## NPM
-```js
-git clone https://github.com/ikraduya/telkom-codex-front.git
-npm install
-npm install -g nodemon
-```
-## Yarn
-```js
-git clone https://github.com/ikraduya/telkom-codex-front.git
-yarn install
-```
-
-# Cara Menjalankan Program
 *Pastikan service mongodb sudah dijalankan
 ## NPM
 ```js
+git clone https://github.com/ikraduya/devchallenge-TwelveDays-backend.git
+npm install
+npm install -g nodemon
 nodemon app
 ```
 ## Yarn
 ```js
+git clone https://github.com/ikraduya/devchallenge-TwelveDays-backend.git
+yarn install
 yarn start
 ```

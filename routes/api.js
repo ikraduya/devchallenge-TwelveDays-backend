@@ -10,10 +10,11 @@ const {
 } = require('../controllers/calendar');
 const {
   getAllProduct
-} = require('../controllers/product')
+} = require('../controllers/product');
 const {
-  getAllTalent
-} = require('../controllers/talent')
+  getAllTalent,
+} = require('../controllers/talent');
+
 const router = express.Router();
 
 /**
