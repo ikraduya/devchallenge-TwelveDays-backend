@@ -5,7 +5,7 @@
 - Ikraduya Edian | ikraduya@gmail.com
 - Rifo Ahmad Genadi | rifoagenadi@gmail.com
 
-# Cara Instalasi Program
+# Cara Menjalankan Program
 *Pastikan service mongodb sudah dijalankan
 ## NPM
 ```js
