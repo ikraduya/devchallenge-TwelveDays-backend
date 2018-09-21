@@ -26,6 +26,7 @@ const memberListIndihome = [
     pointQueueHist: [0, 20, 11, 30],
     star: 4,
     role: 'UX',
+    status: 'Floating'
   },
   {
     _id: mongoose.Types.ObjectId(),
@@ -36,6 +37,7 @@ const memberListIndihome = [
     pointQueueHist: [0, 20, 11, 30],
     star: 4,
     role: 'FE',
+    status: 'Floating'
   },
   {
     _id: mongoose.Types.ObjectId(),
@@ -46,6 +48,7 @@ const memberListIndihome = [
     pointQueueHist: [0, 20, 11, 30],
     star: 4,
     role: 'BE',
+    status: 'Floating'
   },
 ];
 
@@ -59,6 +62,7 @@ const memberListTemanBerbagi = [
     pointQueueHist: [0, 20, 11, 30],
     star: 4,
     role: 'QA',
+    status: 'Floating'
   },
   {
     _id: mongoose.Types.ObjectId(),
@@ -69,6 +73,7 @@ const memberListTemanBerbagi = [
     pointQueueHist: [0, 20, 11, 30],
     star: 4,
     role: 'MOBILE',
+    status: 'Floating'
   },
   {
     _id: mongoose.Types.ObjectId(),
@@ -79,6 +84,50 @@ const memberListTemanBerbagi = [
     pointQueueHist: [0, 20, 11, 30],
     star: 4,
     role: 'UX',
+    status: 'Floating'
+  },
+];
+
+const vacantTalent = [
+  {
+    name: 'Roy A',
+    stream: 'Backend',
+    pointBurnHist: [0, 100, 110, 102],
+    pointRemainingHist: [0, 10, 20, 30],
+    pointQueueHist: [0, 20, 11, 30],
+    star: 4,
+    role: 'MOBILE',
+    status: 'Vacant'
+  },
+  {
+    name: 'Wawanto',
+    stream: 'Frontend',
+    pointBurnHist: [0, 100, 110, 0],
+    pointRemainingHist: [0, 10, 20, 30],
+    pointQueueHist: [0, 20, 11, 30],
+    star: 4,
+    role: 'UX',
+    status: 'Vacant'
+  },
+  {
+    name: 'Buddy',
+    stream: 'Backend',
+    pointBurnHist: [0, 100, 110, 102],
+    pointRemainingHist: [0, 10, 20, 30],
+    pointQueueHist: [0, 20, 11, 30],
+    star: 4,
+    role: 'QA',
+    status: 'Vacant'
+  },
+  {
+    name: 'Yanto',
+    stream: 'Frontend',
+    pointBurnHist: [0, 100, 110, 0],
+    pointRemainingHist: [0, 10, 20, 30],
+    pointQueueHist: [0, 20, 11, 30],
+    star: 4,
+    role: 'FE',
+    status: 'Vacant'
   },
 ];
 
@@ -182,6 +231,7 @@ const productList = [
 Talent.remove()
   .then(() => Talent.insertMany(memberListIndihome))
   .then(() => Talent.insertMany(memberListTemanBerbagi))
+  .then(() => Talent.insertMany(vacantTalent))
   .then(() => console.log('Talents reset done'));
 
 Project.remove()

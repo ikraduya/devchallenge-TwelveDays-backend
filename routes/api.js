@@ -8,7 +8,12 @@ const {
 const {
   getAllEvent, updateEvent, createEvent,
 } = require('../controllers/calendar');
-
+const {
+  getAllProduct
+} = require('../controllers/product')
+const {
+  getAllTalent
+} = require('../controllers/talent')
 const router = express.Router();
 
 /**
@@ -28,6 +33,16 @@ router.get('/', (req, res) => {
  * Project API
  */
 router.get('/project/projects', getAllProject);
+
+/**
+ * Product API
+ */
+router.get('/product/products', getAllProduct);
+
+/**
+ * Project API
+ */
+router.get('/talent/talents', getAllTalent);
 
 /**
  * Team Performance API
