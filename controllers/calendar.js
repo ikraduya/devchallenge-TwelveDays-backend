@@ -94,10 +94,11 @@ exports.createEvent = (req, res) => {
   });
 
   Promise.resolve(createEventQuery)
-    .then(() => {
+    .then((createdEvent) => {
       return res.json({
         status: 'success',
         message: 'Create event success',
+        data: createdEvent,
       });
     })
     .catch((error) => {
