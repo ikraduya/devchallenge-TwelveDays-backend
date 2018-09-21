@@ -6,10 +6,12 @@
 - Rifo Ahmad Genadi | rifoagenadi@gmail.com
 
 # Cara Instalasi Program
+
 ## NPM
 ```js
 git clone https://github.com/ikraduya/telkom-codex-front.git
 npm install
+npm install -g nodemon
 ```
 ## Yarn
 ```js
@@ -21,7 +23,7 @@ yarn install
 *Pastikan service mongodb sudah dijalankan
 ## NPM
 ```js
-npm start
+nodemon app
 ```
 ## Yarn
 ```js
